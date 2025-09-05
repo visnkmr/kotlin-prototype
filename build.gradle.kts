@@ -11,7 +11,7 @@ repositories {
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
+    testImplementation("org.junit.jupiter:junit-jupiter:5.9.2")
 }
 
 tasks.test {
@@ -23,11 +23,11 @@ kotlin {
 }
 
 application {
-    mainClass.set("com.example.MainKt")
+    mainClass.set("com.example.Main")
 }
 
 tasks.jar {
     manifest {
-        attributes["Main-Class"] = "com.example.MainKt"
+        attributes["Main-Class"] = "com.example.Main"
     }
 }
